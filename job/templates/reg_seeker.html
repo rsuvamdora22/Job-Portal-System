@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Seeker Registration</title>
+    <link rel="stylesheet" href="{% static 'CSS/reg_seeker.css' %}">
+</head>
+<body>
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="{% static 'images/JOBTOAST.png' %}" alt="Job Portal Logo">
+        </div>
+
+        <h2>Job Seeker Registration</h2>
+
+        <form  method="POST">
+            {% csrf_token %}
+            <!-- Full Name -->
+            <label for="full_name">Full Name<span style="color:red;">*</span></label>
+            <input type="text" id="full_name" name="full_name" required>
+
+            <!-- Passport Size Photo -->
+            <label for="photo">Passport Size Photo<span style="color:red;">*</span></label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+
+            <!-- Email -->
+            <label for="email">Email Address<span style="color:red;">*</span></label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- Password -->
+            <label for="password">Password<span style="color:red;">*</span></label>
+            <input type="password" id="password" name="password" required>
+
+            <!-- Phone Number -->
+            <label for="phone">Phone Number<span style="color:red;">*</span></label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <!-- Gender -->
+            <label for="gender">Gender<span style="color:red;">*</span></label>
+            <select id="gender" name="gender" required>
+                <option value="" disabled selected>Select your gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+                <option value="prefer_not_to_say">Prefer not to say</option>
+            </select>
+
+            <!-- Date of Birth -->
+            <label for="dob">Date of Birth<span style="color:red;">*</span></label>
+            <input type="date" id="dob" name="dob" required>
+
+            <!-- Address -->
+            <label for="address">Address<span style="color:red;">*</span></label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+
+            <!-- Highest Education -->
+            <label for="education">Highest Qualification<span style="color:red;">*</span></label>
+            <input type="text" id="education" name="education" required>
+
+            <!-- University Name -->
+            <label for="university">University Name<span style="color:red;">*</span></label>
+            <input type="text" id="university" name="university" required>
+
+            <!-- Education Start and End Dates -->
+            <label for="edu_start">Start Date<span style="color:red;">*</span></label>
+            <input type="date" id="edu_start" name="edu_start" required>
+
+            <label for="edu_end">End Date<span style="color:red;">*</span></label>
+            <input type="date" id="edu_end" name="edu_end" required>
+
+            <!-- Work Experience -->
+            <label for="experience">Work Experience (in years)<span style="color:red;">*</span></label>
+            <input type="number" id="experience" name="experience" min="0" required>
+
+            <!-- Previous Company (Employment History) -->
+            <label for="employment">Previous Company<span style="color:red;">*</span></label>
+            <input type="text" id="employment" name="employment" required>
+
+            <!-- Preferred Job Type -->
+            <label for="job_type">Preferred Job Type<span style="color:red;">*</span></label>
+            <select id="job_type" name="job_type" required>
+                <option value="full_time">Full-time</option>
+                <option value="part_time">Part-time</option>
+                <option value="internship">Internship</option>
+                <option value="freelance">Freelance</option>
+            </select>
+
+            <!-- Preferred Locations -->
+            <label for="locations">Preferred Job Locations<span style="color:red;">*</span></label>
+            <input type="text" id="locations" name="locations" placeholder="Enter cities or regions" required>
+
+            <!-- Availability to Work -->
+            <label for="availability">Availability to Work<span style="color:red;">*</span></label>
+            <input type="date" id="availability" name="availability" required>
+
+            <!-- Key Skills -->
+            <label for="skills">Key Skills<span style="color:red;">*</span></label>
+            <input type="text" id="skills" name="skills" placeholder="Enter your key skills, separated by commas" required>
+
+            <!-- Languages -->
+            <label for="languages">Languages Known<span style="color:red;">*</span></label>
+            <input type="text" id="languages" name="languages" placeholder="Enter languages you speak, separated by commas" required>
+
+            <!-- Internships -->
+            <label for="internships">Internships</label>
+            <textarea id="internships" name="internships" rows="3" placeholder="Mention your internship details"></textarea>
+
+            <!-- Projects -->
+            <label for="projects">Projects</label>
+            <textarea id="projects" name="projects" rows="3" placeholder="Mention your project details"></textarea>
+
+            <!-- Certifications -->
+            <label for="certifications">Certifications</label>
+            <textarea id="certifications" name="certifications" rows="2" placeholder="Enter certifications you have"></textarea>
+
+            <!-- Profile Summary -->
+            <label for="profile_summary">Profile Summary</label>
+            <textarea id="profile_summary" name="profile_summary" rows="4" placeholder="Write a brief summary about yourself"></textarea>
+
+            <!-- Resume Upload -->
+            <label for="resume">Upload Resume (PDF)<span style="color:red;">*</span></label>
+            <input type="file" id="resume" name="resume" accept=".pdf" required>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Register</button>
+        </form>
+    </div>
+</body>
+</html>

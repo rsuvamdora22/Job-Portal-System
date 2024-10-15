@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruiter Home Page</title>
+    <link rel="stylesheet" href="{% static 'CSS/recruiter_home.css' %}">
+</head>
+<body>
+    <div class="dashboard-overview">
+        <div class="summary-cards">
+          <div class="card">Active Job Openings: {{ openings|length }}</div>
+          <div class="card">New Applications: 20</div>
+          <div class="card">Interviews Scheduled: 3</div>
+          <div class="card">Hiring Stats: 2 Positions Filled</div>
+        </div>
+        <div class="recent-activity-feed">
+          <h3>Recent Activity</h3>
+          <ul>
+            <li>New Application for Marketing Manager</li>
+            <li>Interview Scheduled for John Doe</li>
+            <li>Software Engineer Position Filled</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="job-posting-management">
+        <h2>Job Posting Management</h2>
+        <a href="{% url 'hir_sek' %}"><button>Create Job Posting</button></a>
+        <a href="{% url 'jp_history' %}"><button>History</button></a>
+        <table>
+          <thead>
+            <tr>
+              <th>Job Title</th>
+              <th>Location</th>
+              <th>Status</th>
+              <th>Applications</th>
+              <th>Last Date</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for i in openings %}
+              <tr>
+                <td>{{ i.jt }}</td>
+                <td>{{ i.jl }}</td>
+                <td>Active</td>
+                <td>{{ i.pos }}</td>
+                <td>{{ i.ld }}</td>
+                <td><a href="{% url 'view_job_post' i.id %}"><button>View</button></a> <a href="{% url 'removd_pst' i.id %}"><button>Delete</button></a></td>
+              </tr>
+              <!-- More rows as needed -->
+            {% endfor %}
+          </tbody>
+        </table>
+        
+      </div>
+      
+      <div class="candidate-management">
+        <h2>Candidate Management</h2>
+        <div class="pipeline-view">
+          <div>Applied: 50</div>
+          <div>Interviewed: 10</div>
+          <div>Offered: 3</div>
+          <div>Hired: 1</div>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Candidate Name</th>
+              <th>Job Applied For</th>
+              <th>Application Date</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jane Smith</td>
+              <td>Marketing Manager</td>
+              <td>2024-09-30</td>
+              <td>Interview Scheduled</td>
+              <td><button>View Profile</button> <button>Message</button></td>
+            </tr>
+            <!-- More rows as needed -->
+          </tbody>
+        </table>
+      </div>
+      
+</body>
+</html>
