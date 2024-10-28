@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Job Opening</title>
+    <link rel="stylesheet" href="{% static 'CSS/hiring_seekers.css' %}">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Post a Job Opening</h2>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="job-title">Job Title</label>
+                <input type="text" id="job-title" name="job_title" placeholder="Enter job title" required>
+            </div>
+
+            <div class="form-group-inline">
+                <div class="form-group">
+                    <label for="company-name">Company Name</label>
+                    <input type="text" id="company-name" name="company_name" placeholder="Enter company name" required>
+                </div>
+                <div class="form-group">
+                    <label for="job-location">Job Location</label>
+                    <input type="text" id="job-location" name="job_location" placeholder="Enter job location" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="company-logo">Company Logo</label>
+                <input type="file" id="company-logo" name="company_logo" accept="image/*" required>
+            </div>
+
+            <div class="form-group">
+                <label for="job-type">Job Type</label>
+                <select id="job-type" name="job_type" required>
+                    <option value="Full-Time">Full-Time</option>
+                    <option value="Part-Time">Part-Time</option>
+                    <option value="Contract">Contract</option>
+                    <option value="Internship">Internship</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="education">Education Requirements</label>
+                <input type="text" id="education" name="education" placeholder="Required education level" required>
+            </div>
+
+            <div class="form-group">
+                <label for="key-skills">Key Skills</label>
+                <textarea id="key-skills" name="key_skills" rows="3" placeholder="Enter key skills" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="experience">Experience (Years)</label>
+                <input type="number" id="experience" name="experience" placeholder="Years of experience" required>
+            </div>
+
+            <div class="form-group">
+                <label for="about-company">About the Company</label>
+                <textarea id="about-company" name="about_company" rows="4" placeholder="Write about your company" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="job-openings">Number of Openings/Positions</label>
+                <input type="number" id="job-openings" name="job_openings" placeholder="Enter the number of job openings" required>
+            </div>
+
+            <div class="form-group">
+                <label for="job-description">Job Description</label>
+                <textarea id="job-description" name="job_description" rows="5" placeholder="Enter job description" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="job-requirements">Job Requirements</label>
+                <textarea id="job-requirements" name="job_requirements" rows="5" placeholder="List job requirements" required></textarea>
+            </div>
+
+            <div class="form-group-inline">
+                <div class="form-group">
+                    <label for="salary">Salary (Optional)</label>
+                    <input type="text" id="salary" name="salary" placeholder="Enter salary range">
+                </div>
+                <div class="form-group">
+                    <label for="apply-link">Application Link</label>
+                    <input type="text" id="apply-link" name="apply_link" placeholder="Enter application link" required>
+                </div>
+            </div>
+
+            <!-- New Field for Last Date of Application -->
+            <div class="form-group">
+                <label for="last-date">Last Date of this Application</label>
+                <input type="date" id="last-date" name="last_date" required>
+            </div>
+
+            <button type="submit">Submit Job</button>
+        </form>
+    </div>
+
+</body>
+</html>

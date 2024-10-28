@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Seeker Login</title>
+    <link rel="stylesheet" href="{% static 'CSS/login_seeker.css' %}">
+</head>
+<body>
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="{% static 'images/JOBTOAST.png' %}" alt="Job Portal Logo">
+        </div>
+
+        <!-- Welcome message -->
+        <h1>Job Seeker Login</h1>
+
+        <!-- Login Form -->
+        <div class="login-card active">
+            <form method="POST">
+                {% csrf_token %}
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+
+            {% if messages %}
+                <div class="messages">
+                    <ul>
+                        {% for message in messages %}
+                            <li class="{{ message.tags }}">{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+
+            <!-- Important message -->
+            <p class="important-message">*If you are a new user, please register yourself.</p>
+
+            <!-- Register button -->
+            <div class="register-link">
+                <p>Don't have an account? <a href="{% url 'reg_seeker' %}">Register here</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f4f0;
+    color: #333333;
+  }
+  
+  .job-post {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .job-post:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .job-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .company-logo img {
+    max-width: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .job-title h2 {
+    font-size: 20px;
+    color: #736b5e;
+  }
+  
+  .job-details {
+    margin-top: 10px;
+  }
+  
+  .company-name {
+    font-size: 18px;
+    color: #333333;
+    margin-bottom: 10px;
+  }
+  
+  .job-location,
+  .job-type,
+  .education,
+  .key-skills,
+  .experience,
+  .openings,
+  .salary {
+    margin: 5px 0;
+  }
+  
+  .apply-button {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .apply-button button {
+    padding: 8px 16px;
+    background-color: #736b5e;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .apply-button button:hover {
+    background-color: #a8a29e;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .job-post {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
