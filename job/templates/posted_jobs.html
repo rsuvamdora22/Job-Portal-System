@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Posted Job Details</title>
+  <link rel="stylesheet" href="{% static 'CSS/posted_jobs.css' %}">
+</head>
+<body>
+    <h1 style="text-align: center;color: #333333;">Opportunities</h1>
+  {% for i in jobs %}
+    <div class="job-post">
+      <div class="job-header">
+        <div class="company-logo">
+          <img src="{{ i.cl.url }}" alt="Company Logo">
+        </div>
+        <div class="job-title">
+          <h2>{{ i.jt }}</h2>
+        </div>
+      </div>
+      <div class="job-details">
+        <h2 class="company-name">{{ i.cn }}</h2>
+        <p class="job-location"><strong>Location:</strong> {{ i.jl }}</p>
+        <p class="job-type"><strong>Job Type:</strong> {{ i.jtyp }}</p>
+        <p class="education"><strong>Education Requirement:</strong> {{ i.er }}</p>
+        <p class="key-skills"><strong>Key Skills:</strong> {{ i.kysk }}</p>
+        <p class="experience"><strong>Experience:</strong> {{ i.exp }}+ years</p>
+        <p class="openings"><strong>Number of Openings:</strong> {{ i.pos }}</p>
+        <p class="salary"><strong>Salary:</strong> {{ i.sal }}</p>
+      </div>
+      <div class="apply-button">
+        <a href="{% url 'job_dtls' i.id seeker.id %}"><button><b>Apply</b></button></a>
+      </div>
+    </div>
+  {% endfor %}
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applied Jobs</title>
+    <link rel="stylesheet" href="{% static 'CSS/applied_jobs.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>My Applied Jobs</h2>
+        
+        {% for i in applied %}
+        <div class="job-card">
+            <div class="company-logo">
+                <img src="{{ i.cl.url }}" alt="Company Logo">
+            </div>
+            <div class="job-info">
+                <a href="{% url 'app_tracker' i.id %}"><h3>{{ i.jt }}</h3></a>
+                <p class="company-name">{{ i.cn }}</p>
+                <p class="job-location"><strong>Location:</strong> {{ i.jl }}</p>
+                <p class="application-date"><strong>Applied On:</strong> {{ i.ad }}</p>
+            </div>
+            <div class="status">
+                <span><strong>Status:</strong> {{ i.status }}</span>
+            </div>                      
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

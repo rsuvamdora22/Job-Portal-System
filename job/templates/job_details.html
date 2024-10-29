@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opportunities Details</title>
+    <link rel="stylesheet" href="{% static 'CSS/job_details.css' %}">
+    <!-- <script>
+        function applyJob(event) {
+            event.preventDefault(); // Prevent the form from submitting
+            const button = document.getElementById('apply-button');
+            button.innerHTML = "Applied"; // Change button text to 'Applied'
+            button.disabled = true; // Disable the button to make it non-functional
+        }
+    </script> -->
+</head>
+<body>
+    <div class="container">
+        <h2>Opportunities Details</h2>
+        
+        <div class="detail-group">
+            <h4>Job Title:</h4>
+            <p>{{ jobdtls.jt }}</p>
+        </div>
+        
+        <div class="detail-group">
+            <h4>Company Name:</h4>
+            <p>{{ jobdtls.cn }}</p>
+        </div>
+
+        <div class="detail-group">
+            <h4>Job Location:</h4>
+            <p>{{ jobdtls.jl }}</p>
+        </div>
+
+        <div class="detail-group">
+            <h4>Company Logo:</h4>
+            <img src="{{ jobdtls.cl.url }}" alt="Company Logo" class="logo">
+        </div>
+
+        <div class="detail-group">
+            <h4>Job Type:</h4>
+            <p>{{ jobdtls.jtyp }}</p>
+        </div>
+
+        <div class="detail-group">
+            <h4>Education Requirements:</h4>
+            <p>{{ jobdtls.er }}</p>
+        </div>
+
+        <div class="detail-group">
+            <h4>Key Skills:</h4>
+            <p>{{ jobdtls.kysk }}</p>
+        </div>
+
+        <div class="detail-group">
+            <h4>Experience:</h4>
+            <p>{{ jobdtls.exp }} years</p>
+        </div>
+
+        <div class="detail-group">
+            <h4>About the Company:</h4>
+            <p>{{ jobdtls.abtcomp }}</p>
+        </div>
+
+        <div class="detail-group">
+            <h4>Number of Openings:</h4>
+            <p>{{ jobdtls.pos }}</p>
+        </div>
+
+        <div class="detail-group">
+            <h4>Job Description:</h4>
+            <p>{{ jobdtls.jd }}</p>
+        </div>
+
+        <div class="detail-group">
+            <h4>Job Requirements:</h4>
+            <p>{{ jobdtls.jr }}</p>
+        </div>
+
+        <div class="detail-group">
+            <h4>Salary:</h4>
+            <p>{{ jobdtls.sal }}</p>
+        </div>
+
+        <div class="detail-group">
+            <h4>Application Link:</h4>
+            <p>{{ jobdtls.al }}</p>
+        </div>
+
+        <div class="detail-group">
+            <h4>Last Date to Apply:</h4>
+            <p>{{ jobdtls.ld }}</p>
+        </div>
+
+        <div class="detail-group">
+            <h4>Status:</h4>
+            <p>Active</p>
+        </div>
+
+        <!-- Apply Button -->
+        <form method="POST">
+            {% csrf_token %}
+            <div class="apply-button">
+                <button type="submit">Apply Now</button>
+            </div>
+        </form>
+
+    </div>
+</body>
+</html>

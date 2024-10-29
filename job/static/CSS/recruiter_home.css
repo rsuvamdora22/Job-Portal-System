@@ -1,0 +1,170 @@
+/* General Reset and Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333333;
+}
+
+/* Dashboard Overview */
+.dashboard-overview {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  padding-top: 70px; /* Increased top padding for logout button clearance */
+  background-color: #736b5e;
+  color: #ffffff;
+}
+
+.summary-cards {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: #a8a29e;
+  padding: 15px;
+  border-radius: 8px;
+  width: 22%;
+  text-align: center;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+  background-color: #ddd;
+  transform: scale(1.05);
+}
+
+.recent-activity-feed ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recent-activity-feed li {
+  margin: 8px 0;
+  animation: fadeIn 0.6s ease forwards;
+  opacity: 0;
+}
+
+/* Job Posting Management */
+.job-posting-management {
+  padding: 20px;
+  background-color: #ffffff;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.job-posting-management button {
+  background-color: #736b5e;
+  color: #ffffff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.job-posting-management button:hover {
+  background-color: #a8a29e;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #736b5e;
+  color: #ffffff;
+}
+
+tr:nth-child(even) {
+  background-color: #f7f4f0;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+/* Candidate Management */
+.candidate-management {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pipeline-view {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.pipeline-view div {
+  background-color: #a8a29e;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.pipeline-view div:hover {
+  transform: scale(1.1);
+}
+
+table button {
+  background-color: #736b5e;
+  color: #ffffff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+table button:hover {
+  background-color: #a8a29e;
+}
+
+/* Logout Button Styling */
+.logout-button-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000; /* Ensures it stays above other elements */
+}
+
+.logout-button {
+  background-color: #a8a29e;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size:medium;
+}
+
+.logout-button:hover {
+  background-color: #736b5e;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
