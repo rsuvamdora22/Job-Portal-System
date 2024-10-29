@@ -18,8 +18,8 @@
 ![Screenshot 2024-10-28 210859](https://github.com/user-attachments/assets/cabbeae2-93b7-4663-9176-8a9bb046f0e9)
 
 # Recruiter Home Page - 
-![Screenshot 2024-10-28 211036](https://github.com/user-attachments/assets/86434166-4702-45a8-b6f5-13b93776bdc4)
-![Screenshot 2024-10-28 212029](https://github.com/user-attachments/assets/e3044611-7969-4033-a2e4-1c6a43ceb317)
+![Screenshot 2024-10-29 144749](https://github.com/user-attachments/assets/bbabe539-f866-41ff-8e33-6665a8f606df)
+![Screenshot 2024-10-29 144815](https://github.com/user-attachments/assets/ef8a3dc2-56a4-4ead-97ae-adc8c87364c5)
 
 # Create Job Post Page -
 ![Screenshot 2024-10-28 211553](https://github.com/user-attachments/assets/e214f224-033c-49af-81da-575259aa98b1)
@@ -36,7 +36,7 @@
 ![Screenshot 2024-10-28 220316](https://github.com/user-attachments/assets/8a8db606-da37-4f8b-af3f-5f2cfaab7213)
 
 # Job Seeker Home Page - 
-![Screenshot 2024-10-28 220607](https://github.com/user-attachments/assets/5a65c13c-fd20-49a9-bac7-78d5cff37e17)
+![Screenshot 2024-10-29 145140](https://github.com/user-attachments/assets/5059cdbe-4ac6-4724-b67b-54e0848710cb)
 
 # Edit Profile Page - 
 ![Screenshot 2024-10-28 220732](https://github.com/user-attachments/assets/219c21c6-c498-415f-8c73-2bb8e749bc71)
