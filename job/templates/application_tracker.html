@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Application Tracker</title>
+    <link rel="stylesheet" href="{% static 'CSS/application_tracker.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/JOBTOAST.png' %}" type="image/x-icon">
+
+</head>
+<body>
+    <div class="tracker-container">
+        <h1>Application Tracker</h1>
+        <div class="job-info">
+            <h2>{{ job_tracker.jt }}</h2>
+            <p><strong>Company:</strong> {{ job_tracker.cn }}</p>
+            <p><strong>Location:</strong> {{ job_tracker.jl }}</p>
+            <p><strong>Applied on:</strong> {{ job_tracker.ad }}</p>
+        </div>
+
+        <div class="progress-chart">
+            <div class="progress-circle" style="--progress: {{ progress }}%;">
+                <span>{{ progress }}%</span>
+            </div>
+            <p>Current Status: {{ status }}</p>
+        </div>
+    </div>
+</body>
+</html>

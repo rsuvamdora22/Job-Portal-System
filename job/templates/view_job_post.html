@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Post Details</title>
+    <link rel="stylesheet" href="{% static 'CSS/view_job_post.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/JOBTOAST.png' %}" type="image/x-icon">
+
+</head>
+<body>
+    <div class="container">
+        <h2>Job Post Details</h2>
+        
+        <div class="detail-group">
+            <h4>Job Title:</h4>
+            <p>{{ hirsek.jt }}</p>
+        </div>
+        
+        <div class="detail-group">
+            <h4>Company Name:</h4>
+            <p>{{ hirsek.cn }}</p>
+        </div>
+
+        <div class="detail-group">
+            <h4>Job Location:</h4>
+            <p>{{ hirsek.jl }}</p>
+        </div>
+
+        <div class="detail-group">
+            <h4>Company Logo:</h4>
+            <img src="{{ hirsek.cl.url }}" alt="Company Logo" class="logo">
+        </div>
+
+        <div class="detail-group">
+            <h4>Job Type:</h4>
+            <p>{{ hirsek.jtyp }}</p>
+        </div>
+
+        <div class="detail-group">
+            <h4>Education Requirements:</h4>
+            <p>{{ hirsek.er }}</p>
+        </div>
+
+        <div class="detail-group">
+            <h4>Key Skills:</h4>
+            <p>{{ hirsek.kysk }}</p>
+        </div>
+
+        <div class="detail-group">
+            <h4>Experience:</h4>
+            <p>{{ hirsek.exp }} years</p>
+        </div>
+
+        <div class="detail-group">
+            <h4>About the Company:</h4>
+            <p>{{ hirsek.abtcomp }}</p>
+        </div>
+
+        <div class="detail-group">
+            <h4>Number of Openings:</h4>
+            <p>{{ hirsek.pos }}</p>
+        </div>
+
+        <div class="detail-group">
+            <h4>Job Description:</h4>
+            <p>{{ hirsek.jd }}</p>
+        </div>
+
+        <div class="detail-group">
+            <h4>Job Requirements:</h4>
+            <p>{{ hirsek.jr }}</p>
+        </div>
+
+        <div class="detail-group">
+            <h4>Salary:</h4>
+            <p>{{ hirsek.sal }}</p>
+        </div>
+
+        <div class="detail-group">
+            <h4>Application Link:</h4>
+            <p>{{ hirsek.al }}</p>
+        </div>
+
+        <div class="detail-group">
+            <h4>Last Date to Apply:</h4>
+            <p>{{ hirsek.ld }}</p>
+        </div>
+
+        <div class="detail-group">
+            <h4>Status:</h4>
+            <p>Active</p>
+        </div>
+    </div>
+</body>
+</html>
